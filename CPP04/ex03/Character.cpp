@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ejawe <ejawe@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/26 19:41:45 by ejawe             #+#    #+#             */
+/*   Updated: 2021/02/26 19:41:46 by ejawe            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Character.hpp"
 
 Character::Character()
@@ -29,9 +41,7 @@ Character & Character::operator=(const Character &rhs)
     {
         this->_index = rhs._index;
 		this->_name = rhs._name;
-		std::cout << "ok" << std::endl;
 		this->deleteCharacter();
-		std::cout << "ok" << std::endl;
 		int i = 0;
 		while (i < 4)
 		{
@@ -78,14 +88,10 @@ void	Character::use(int idx, ICharacter& target)
 void	Character::deleteCharacter()
 {
 	int i = 0;
-	
 	while (i < this->_index)
 	{
 		if (this->_stock[i] != NULL)
-		{
-			// delete this->_stock[i];
 			this->_stock[i] = NULL;
-		}
 		i++;
 	}
 	return;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ejawe <ejawe@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/26 19:41:23 by ejawe             #+#    #+#             */
+/*   Updated: 2021/02/26 19:41:25 by ejawe            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "AMateria.hpp"
 #include "IMateriaSource.hpp"
 #include "Ice.hpp"
@@ -62,7 +74,9 @@ int main()
 	moi->unequip(1);
 	moi->use(1, *bob);
 	std::cout << "tmp xp = " << tmp->getXP() << std::endl;
+	std::cout << std::endl;
 
+	std::cout << "---------Deep Copy" << std::endl;
 	ICharacter *luc = new Character(*static_cast<Character*>(moi));
 	luc->use(0, *bob);
 	luc->use(1, *bob);
@@ -72,7 +86,6 @@ int main()
 	delete bob;
 	delete moi;
 	delete src;
-	std::cout << "delete luc" << std::endl;
 	delete luc;
 	system("leaks a.out");
 	return 0;

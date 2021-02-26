@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ejawe <ejawe@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/26 19:41:57 by ejawe             #+#    #+#             */
+/*   Updated: 2021/02/26 19:41:58 by ejawe            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Cure.hpp"
 
 Cure::Cure() : AMateria("cure")
@@ -5,7 +17,7 @@ Cure::Cure() : AMateria("cure")
 
 }
 
-Cure::Cure(const Cure &src)
+Cure::Cure(const Cure &src) : AMateria("cure")
 {
     *this = src;
     return;
