@@ -1,0 +1,9 @@
+Maintenant le véritable objectif de l’exercice : vos Zombies doivent être détruits aux
+moment approprié (donc, quand ils ne sont plus nécessaires). 
+
+Ils doivent aussi être alloué le
+de la manière appropriée : Parfois, il est approprié de les avoir sur la stack, à d’autres
+moments, la heap est un meilleur choix. 
+
+Vous devrez justifier ce que vous avez fait pour
+obtenir une note positive.
