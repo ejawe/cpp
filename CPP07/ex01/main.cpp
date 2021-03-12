@@ -5,33 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejawe <ejawe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/26 20:03:01 by ejawe             #+#    #+#             */
-/*   Updated: 2021/03/02 11:50:29 by ejawe            ###   ########.fr       */
+/*   Created: 2021/03/12 15:08:46 by ejawe             #+#    #+#             */
+/*   Updated: 2021/03/12 15:08:47 by ejawe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Victim.hpp"
-#include "Peon.hpp"
-#include "Neon.hpp"
+#include "iter.hpp"
+#include "Awesome.hpp"
 
-int main()
+int main(void)
 {
-    Sorcerer robert("Robert", "the Magnificent");
-    Victim jim("Jimmy");
-    Peon joe("Joe");
-    Neon rob("Rob");
-    Victim *james = new Peon("James");
+	std::cout << "-----------Int test" << std::endl;
+	int tab[] = {0, 1, 2, 3, 4, 5};
+	iter(tab, 6, display);
 
-    std::cout << "-------------" << std::endl;
-    std::cout << robert << jim << joe << *james << rob;
-    std::cout << "-------------" << std::endl;
+	std::cout << "-----------Char test" << std::endl;
+	char c[] = "bonjour";
+	iter(c, 7, display);
 
-    robert.polymorph(jim);
-    robert.polymorph(joe);
-    robert.polymorph(*james);
-    robert.polymorph(rob);
+	std::cout << "-----------float test" << std::endl;
+	double tabf[] = {0.0, 1.1, 2.2, 3.3, 4.4, 5.5};
+	iter(tabf, 6, display);
 
-    delete james;
-    return 0;
+	std::cout << "-----------class Awesome test" << std::endl;
+	{
+		int tab[] = {0, 1, 2, 3, 4};
+		Awesome tab2[5];
+
+		iter(tab, 5, print);
+		iter(tab2, 5, print);
+	}
+	return 0;
 }

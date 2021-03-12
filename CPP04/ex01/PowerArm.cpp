@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PlasmaRifle.cpp                                    :+:      :+:    :+:   */
+/*   PowerArm.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ejawe <ejawe@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/26 20:02:01 by ejawe             #+#    #+#             */
-/*   Updated: 2021/02/27 19:13:09 by ejawe            ###   ########.fr       */
+/*   Created: 2021/03/02 12:09:35 by ejawe             #+#    #+#             */
+/*   Updated: 2021/03/02 12:09:37 by ejawe            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PlasmaRifle.hpp"
+#include "PowerArm.hpp"
 
-PlasmaRifle::PlasmaRifle() : AWeapon("Plasma Rifle", 5, 21)
+PowerArm::PowerArm() : AWeapon("Power Arm", 6, 30)
 {
 
 }
 
 
-PlasmaRifle::PlasmaRifle(const PlasmaRifle &src) : AWeapon(src)
+PowerArm::PowerArm(const PowerArm &src) : AWeapon(src)
 {
     *this = src;
     return;
 }
 
-PlasmaRifle &      PlasmaRifle::operator=(PlasmaRifle const &rhs)
+PowerArm &      PowerArm::operator=(PowerArm const &rhs)
 {
     // std::cout << "Assignation operator called" << std::endl;
     if(this != &rhs)
@@ -36,13 +36,13 @@ PlasmaRifle &      PlasmaRifle::operator=(PlasmaRifle const &rhs)
     return *this;
 }
 
-PlasmaRifle::~PlasmaRifle()
+PowerArm::~PowerArm()
 {
 
 }
 
-void    PlasmaRifle::attack() const
+void    PowerArm::attack() const
 {
-    std::cout << "* piouuu piouuu piouuu *" << std::endl;
+    std::cout << "* BOOOUM ! *" << std::endl;
     return;
 }
