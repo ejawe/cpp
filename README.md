@@ -1,5 +1,7 @@
 # cpp
 
+42 project - Piscine C++
+
 https://www.cplusplus.com/
 
 Fixed point 
